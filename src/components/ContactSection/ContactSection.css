@@ -1,0 +1,166 @@
+.contact-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 150px 156px 100px;
+}
+
+.contact-section__inner {
+  max-width: 744px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-section__heading-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  max-width: 744px;
+}
+
+.contact-section__title {
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #363239;
+}
+
+.contact-section__subtitle {
+  font-family: var(--font-sf-pro-display);
+  font-size: 17px;
+  line-height: 1.3;
+  color: #5d5c70;
+}
+
+.contact-section__actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-section__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-section__icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #908fa3;
+  transition: color 0.15s ease;
+  margin-left: 36px;
+}
+
+.contact-section__icon-link:hover {
+  color: #5d5c70;
+}
+
+.contact-section__mail-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.contact-section__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 100px;
+  background: #675cff;
+  color: white;
+  font-family: var(--font-sf-pro-display);
+  font-size: 17px;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.contact-section__cta-btn:hover {
+  background: #5449e8;
+  color: white;
+}
+
+.contact-section__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-section__copy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sf-pro-display);
+  font-size: 15px;
+  line-height: 1.3;
+  color: #908fa3;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.contact-section__copy-link:hover {
+  color: #5d5c70;
+}
+
+.contact-section__copy-link--copied,
+.contact-section__copy-link--copied:hover {
+  color: #34c96a;
+}
+
+.contact-section__copy-text {
+  transition: color 0.2s ease;
+}
+
+.contact-section__copy-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.15s ease;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE  ≤ 480 px
+════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 70px 16px 60px;
+  }
+
+  .contact-section__inner {
+    max-width: none;
+    gap: 30px;
+  }
+
+  .contact-section__title {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .contact-section__subtitle {
+    font-size: 15px;
+  }
+
+  .contact-section__actions {
+    gap: 16px;
+    width: 100%;
+  }
+
+  .contact-section__links {
+    gap: 40px;
+  }
+}

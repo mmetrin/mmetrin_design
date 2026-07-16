@@ -1,0 +1,31 @@
+.case-outro {
+  display: flex;
+  flex-direction: column;
+  gap: 94px;
+  padding-top: 140px;
+}
+
+.case-outro__portfolio {
+  padding-top: 0;
+}
+
+.case-outro__portfolio .portfolio-section__header {
+  padding-top: 50px;
+}
+
+@media (min-width: 481px) {
+  .case-outro .contact-section {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-outro {
+    gap: 70px;
+    padding-top: 140px;
+  }
+
+  .case-outro__portfolio .portfolio-section__header {
+    padding-top: 0;
+  }
+}

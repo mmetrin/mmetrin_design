@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>mmetrin_design</title>
+    <style>
+      body{background:#fff}
+      #loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;z-index:9999;transition:opacity 0.3s ease}
+      #loader__ring{width:36px;height:36px;border-radius:50%;border:2.5px solid rgba(103,92,255,0.18);border-top-color:#675cff;animation:loader-spin 0.75s linear infinite}
+      @keyframes loader-spin{to{transform:rotate(360deg)}}
+    </style>
+    <script>
+      history.scrollRestoration='manual';
+      document.documentElement.style.overflow='hidden';
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="overflow: hidden">
+    <div id="loader"><div id="loader__ring"></div></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

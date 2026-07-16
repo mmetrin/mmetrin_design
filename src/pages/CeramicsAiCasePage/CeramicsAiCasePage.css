@@ -1,0 +1,77 @@
+@import '../BlackFormCasePage/BlackFormCasePage.css';
+
+.ceramics-ai-case__gallery {
+  display: block;
+  width: 100%;
+  margin: 100px 0 0;
+  padding: 0;
+  overflow: hidden;
+  background: #160d17;
+  line-height: 0;
+}
+
+.ceramics-ai-case__gallery .case-deferred-image,
+.ceramics-ai-case__gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.ceramics-ai-case__gallery .embed-content {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 1181;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ceramics-ai-case__gallery .embed-content--wide {
+  aspect-ratio: 16 / 9;
+}
+
+.ceramics-ai-case__gallery .embed-content--dashboard-short {
+  aspect-ratio: 1920 / 1031;
+}
+
+.ceramics-ai-case__gallery .embed-content--cosplay {
+  aspect-ratio: 1920 / 1560;
+}
+
+.ceramics-ai-case__gallery .embed-content--cosplay-wide {
+  aspect-ratio: 1920 / 1510;
+}
+
+.ceramics-ai-case__gallery .embed-content--autorent-hero {
+  aspect-ratio: 1920 / 1604;
+}
+
+.ceramics-ai-case__gallery .embed-content--autorent-catalog {
+  aspect-ratio: 1920 / 1295;
+}
+
+.ceramics-ai-case__gallery .embed-content--autorent-card {
+  aspect-ratio: 1920 / 1254;
+}
+
+.ceramics-ai-case__gallery .embed-content--autorent-booking {
+  aspect-ratio: 1920 / 1177;
+}
+
+.dashboard-case .ceramics-ai-case__gallery,
+.dashboard-case .ceramics-ai-case__gallery .embed-content {
+  background: #fff;
+}
+
+.lamps-case .ceramics-ai-case__gallery,
+.lamps-case .ceramics-ai-case__gallery .embed-content {
+  background: #1a1817;
+}
+
+.cosplay-case .ceramics-ai-case__gallery,
+.cosplay-case .ceramics-ai-case__gallery .embed-content {
+  background: #fbf9f9;
+}

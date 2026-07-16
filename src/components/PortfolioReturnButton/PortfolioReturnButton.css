@@ -1,0 +1,38 @@
+.portfolio-return {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #7f7bb8;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-return:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #675cff;
+}
+
+.portfolio-return--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .portfolio-return {
+    display: none;
+  }
+}

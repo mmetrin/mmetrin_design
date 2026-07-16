@@ -1,0 +1,456 @@
+.site-footer {
+  --footer-base-width: 1920;
+  --footer-base-height: 980;
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  opacity: 0;
+  animation: footer-reveal 0.6s ease 1.2s forwards;
+}
+
+@keyframes footer-reveal {
+  to { opacity: 1; }
+}
+
+.site-footer__bg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: calc(var(--footer-base-width) / var(--footer-base-height));
+  min-height: 705px;
+  max-height: 1156px;
+  overflow: hidden;
+  background: linear-gradient(to top, #efdbd8 32.975%, #ffffff);
+}
+
+.site-footer__stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Crossfade layers ────────────────────────────────────── */
+.site-footer__variant-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.site-footer__variant-layer--active {
+  opacity: 1;
+}
+
+.site-footer__variant-layer--under {
+  z-index: 1;
+}
+
+.site-footer__variant-layer--top {
+  z-index: 3;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   VARIANT 1 — Катя + компьютер
+════════════════════════════════════════════════════════════ */
+
+.site-footer__color-layer {
+  position: absolute;
+  left: calc(50% - 41.13px);
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 46.8927604167%;
+  height: 100%;
+  -webkit-mask-image: var(--footer-computer-mask);
+  mask-image: var(--footer-computer-mask);
+  -webkit-mask-position: 19.5183227634% 1.8832653061%;
+  mask-position: 19.5183227634% 1.8832653061%;
+  -webkit-mask-size: 78.8749676448% 72.463877551%;
+  mask-size: 78.8749676448% 72.463877551%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.site-footer__color-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+}
+
+.site-footer__photo {
+  position: absolute;
+  left: calc(50% - 41.13px);
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 46.8927604167%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   VARIANT 2/3 — AI-автопортреты
+   bottom: 1920×1125px @ 2x → 3840×2250px
+   top:    1920×1125px @ 2x → 3840×2250px (PNG с прозрачностью)
+════════════════════════════════════════════════════════════ */
+
+/* Нижняя часть — основной фотослой */
+.site-footer__v2-layer,
+.site-footer__v3-layer,
+.site-footer__v4-layer,
+.site-footer__v5-layer,
+.site-footer__v6-layer,
+.site-footer__v7-layer,
+.site-footer__v8-layer,
+.site-footer__v9-layer,
+.site-footer__v10-layer,
+.site-footer__v11-layer,
+.site-footer__v12-layer,
+.site-footer__v13-layer,
+.site-footer__v14-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+}
+
+
+
+
+/* ════════════════════════════════════════════════════════════
+   MARQUEE — фиксирована, одни координаты для обоих вариантов
+════════════════════════════════════════════════════════════ */
+
+.site-footer__marquee-wrap {
+  position: absolute;
+  top: 274.42px;
+  left: -189px;
+  width: 2595.303px;
+  height: 142.188px;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 2;
+  transition: opacity 1.2s ease;
+  cursor: none;
+}
+
+.site-footer__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: footer-marquee 55s linear infinite;
+}
+
+@keyframes footer-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.site-footer__marquee-item {
+  position: relative;
+  display: block;
+  width: 2595.303px;
+  height: 142.188px;
+  flex-shrink: 0;
+}
+
+.site-footer__marquee-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  transition: opacity 1.2s ease;
+  opacity: 0;
+}
+
+.site-footer__marquee-img--active {
+  opacity: 1;
+}
+
+.site-footer__marquee-hitarea {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  text-decoration: none;
+}
+
+.site-footer__marquee-cursor-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #675cff;
+  color: #ffffff;
+  border-radius: 36px;
+  padding: 15px 36px 17px;
+  font-family: var(--font-sf-pro-display);
+  font-size: 15px;
+  line-height: 1.1;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 4;
+  animation: footer-cursor-btn-in 0.2s ease both;
+}
+
+@keyframes footer-cursor-btn-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   CAPTION — фиксированная подпись, всегда видна
+   Figma node 952:45134: bottom 1066px в 1634px → top 510px → CSS 351px
+════════════════════════════════════════════════════════════ */
+
+.site-footer__caption {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 42px;
+  box-shadow: 3px -2px 20px 0 rgba(0, 0, 0, 0.07);
+  white-space: nowrap;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.site-footer__caption-text {
+  font-family: var(--font-sf-pro-display);
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(93, 92, 112, 0.5);
+}
+
+.site-footer--no-caption .site-footer__caption {
+  display: none;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   BOTTOM BAR — всегда поверх
+════════════════════════════════════════════════════════════ */
+
+.site-footer__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 175px;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.site-footer__copy,
+.site-footer__policy {
+  font-family: var(--font-sf-pro-display);
+  font-size: 17px;
+  line-height: 1.35;
+  color: #5d5c70;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   CONTACT SECTION CTA BUTTON — перекраска при v2
+════════════════════════════════════════════════════════════ */
+
+.footer-v2-active .contact-section__cta-btn {
+  background: #80a300;
+}
+
+.footer-v2-active .contact-section__cta-btn:hover {
+  background: #6f8d00;
+}
+
+.footer-v3-active .contact-section__cta-btn {
+  background: #07538f;
+}
+
+.footer-v3-active .contact-section__cta-btn:hover {
+  background: #06487c;
+}
+
+.footer-v4-active .contact-section__cta-btn {
+  background: #e96d00;
+}
+
+.footer-v4-active .contact-section__cta-btn:hover {
+  background: #c95f00;
+}
+
+.footer-v5-active .contact-section__cta-btn {
+  background: #07538f;
+}
+
+.footer-v5-active .contact-section__cta-btn:hover {
+  background: #06487c;
+}
+
+.footer-v6-active .contact-section__cta-btn {
+  background: #009b90;
+}
+
+.footer-v6-active .contact-section__cta-btn:hover {
+  background: #00847b;
+}
+
+.footer-v7-active .contact-section__cta-btn {
+  background: #80a300;
+}
+
+.footer-v7-active .contact-section__cta-btn:hover {
+  background: #6f8d00;
+}
+
+.footer-v8-active .contact-section__cta-btn {
+  background: #80a300;
+}
+
+.footer-v8-active .contact-section__cta-btn:hover {
+  background: #6f8d00;
+}
+
+.footer-v9-active .contact-section__cta-btn,
+.footer-v10-active .contact-section__cta-btn,
+.footer-v11-active .contact-section__cta-btn {
+  background: #890401;
+}
+
+.footer-v12-active .contact-section__cta-btn,
+.footer-v13-active .contact-section__cta-btn {
+  background: #D6CAB7;
+}
+
+.footer-v12-active .contact-section__cta-btn:hover,
+.footer-v13-active .contact-section__cta-btn:hover,
+.footer-v14-active .contact-section__cta-btn:hover {
+  background: #C9B59F;
+}
+
+.footer-v9-active .contact-section__cta-btn:hover,
+.footer-v10-active .contact-section__cta-btn:hover,
+.footer-v11-active .contact-section__cta-btn:hover {
+  background: #6f0301;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE  ≤ 480 px
+════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .site-footer__bg {
+    aspect-ratio: auto;
+    height: 526px;
+    min-height: 526px;
+    max-height: 526px;
+  }
+
+  .site-footer__stage {
+    position: relative;
+    width: 100%;
+    height: 526px;
+  }
+
+  .site-footer__color-layer {
+    width: 420px;
+    height: 517px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 9px;
+    -webkit-mask-size: 331px 331px;
+    mask-size: 331px 331px;
+    -webkit-mask-position: 82px 8.6px;
+    mask-position: 82px 8.6px;
+  }
+
+  .site-footer__photo {
+    width: 420px;
+    height: 526px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .site-footer__bottom {
+    padding: 20px 16px;
+  }
+
+  .site-footer__copy,
+  .site-footer__policy {
+    font-size: 12px;
+  }
+
+  .site-footer__v2-layer,
+  .site-footer__v3-layer,
+  .site-footer__v4-layer,
+  .site-footer__v5-layer,
+  .site-footer__v6-layer,
+  .site-footer__v7-layer,
+  .site-footer__v8-layer,
+  .site-footer__v9-layer,
+  .site-footer__v10-layer,
+  .site-footer__v11-layer,
+  .site-footer__v12-layer,
+  .site-footer__v13-layer,
+  .site-footer__v14-layer {
+    object-position: center top;
+  }
+
+  .site-footer__caption {
+    display: none;
+  }
+
+  .site-footer__marquee-wrap {
+    top: 126px;
+    left: -92px;
+    width: 1210px;
+    height: 66.7px;
+    cursor: default;
+  }
+
+  .site-footer__marquee-item {
+    width: 1210px;
+    height: 66.7px;
+  }
+
+  .site-footer__marquee-hitarea,
+  .site-footer__marquee-cursor-btn {
+    display: none;
+  }
+}

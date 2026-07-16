@@ -1,0 +1,27 @@
+.page-transition--not-found {
+  min-height: auto;
+}
+
+.not-found-page .contact-section {
+  padding-bottom: 70px;
+}
+
+.not-found-page .contact-section__cta-btn,
+.footer-v13-active .not-found-page .contact-section__cta-btn {
+  background: rgba(198, 194, 255, 0.3);
+  color: #5d5c70;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.not-found-page .contact-section__cta-btn:hover,
+.footer-v13-active .not-found-page .contact-section__cta-btn:hover {
+  background: rgba(198, 194, 255, 0.8);
+  color: #5d5c70;
+}
+
+@media (max-width: 480px) {
+  .not-found-page .contact-section {
+    padding-bottom: 70px;
+  }
+}

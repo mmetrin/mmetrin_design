@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon/ queue">
+<path id="arrow" d="M2 3.69995C2.85714 4.48567 4 5.27138 4.5 5.84281C4 6.41424 2.85714 7.19995 2 7.98567" stroke="var(--stroke-0, #7773B0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="line 1" d="M9 6.1867C13.5 5.8867 17 6.4867 22 6.1867" stroke="var(--stroke-0, #7773B0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="line 2" d="M2.5 11.9999C8 11.6999 15.5 12.2999 22 11.9999" stroke="var(--stroke-0, #7773B0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="line 3" d="M2.5 17.5866C8 17.2866 15.5 17.8866 22 17.5866" stroke="var(--stroke-0, #7773B0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

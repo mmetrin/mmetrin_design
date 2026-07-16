@@ -1,0 +1,15 @@
+@import '../CeramicsAiCasePage/CeramicsAiCasePage.css';
+
+.dashboard-case .case-text .case-cover__pill {
+  margin-top: 16px;
+}
+
+.dashboard-case .case-text .case-cover__pill::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.019 23.019'%3E%3Cg transform='translate(23.019 10.141) rotate(135)'%3E%3Cpath d='M1.469 6.92565C4.98677 7.26034 8.969 6.92628 16.969 6.92561' stroke='%235d5c70' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M1.25 7.08382C3.01639 8.84979 5.6424 11.6727 8.67359 13.0933' stroke='%235d5c70' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M7.43589 1.25032C4.9624 2.30918 3.04349 4.42497 1.42652 7.25981' stroke='%235d5c70' stroke-width='2.5' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
